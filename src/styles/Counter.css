@@ -1,0 +1,5 @@
+div > p:first-child {
+  color: var(--action-color);
+}
+
+/*# sourceMappingURL=Counter.css.map */

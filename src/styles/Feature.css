@@ -1,0 +1,44 @@
+.feature {
+  position: relative;
+  width: calc(100% - 0.5rem);
+  padding: 2rem;
+}
+.feature > * {
+  position: relative;
+  z-index: 2;
+}
+@media (min-width: 75em) {
+  .feature {
+    width: 100%;
+  }
+}
+.feature::before, .feature::after {
+  content: "";
+  position: absolute;
+}
+.feature::before {
+  inset: 0;
+  background-color: var(--neutral-100);
+  border: 3px solid var(--neutral-700);
+  border-radius: 1rem;
+  box-shadow: 0 0 0 6px var(--neutral-100);
+  z-index: 1;
+}
+.feature::after {
+  background-color: var(--action-color);
+  inset: 1rem -0.85rem -0.85rem 1rem;
+  border-radius: 1rem;
+  z-index: 0;
+}
+
+:global(.feature [astro-icon]) {
+  width: 4rem;
+  color: var(--action-color);
+}
+
+:global(.darkmode .feature::before) {
+  background-color: var(--dark-100);
+  box-shadow: 0 0 0 6px var(--dark-100);
+}
+
+/*# sourceMappingURL=Feature.css.map */

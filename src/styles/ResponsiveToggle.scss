@@ -1,0 +1,23 @@
+@use '../assets/scss/base/breakpoint' as *;
+@use '../assets/scss/base/outline' as *;
+
+.responsive-toggle {
+  display: none;
+  padding: 0;
+  margin-top: 6px;
+  border: none;
+
+  svg {
+    width: 30px;
+
+    path {
+      transition: fill 0.2s ease-in-out;
+    }
+  }
+
+  &:hover {
+    svg path {
+      fill: var(--primary-400);
+    }
+  }
+}

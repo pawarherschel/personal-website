@@ -1,0 +1,30 @@
+*:focus,
+*:focus-visible {
+  outline: 2px dotted black;
+  outline-color: black;
+  outline-offset: 0;
+  -webkit-box-shadow: 0 0 0 2px white;
+  box-shadow: 0 0 0 2px white;
+}
+
+*:focus:not(:focus-visible) {
+  outline: none;
+  box-shadow: none;
+}
+
+header .type-icon a {
+  display: block;
+}
+header .type-icon a [astro-icon] {
+  margin-top: -4px;
+  width: 30px;
+}
+header .type-icon a [astro-icon] path {
+  fill: var(--action-color);
+  transition: fill 0.2s ease-in-out;
+}
+header .type-icon a:hover [astro-icon] path {
+  fill: var(--action-color-state);
+}
+
+/*# sourceMappingURL=Header.css.map */
