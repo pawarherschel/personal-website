@@ -1,0 +1,24 @@
+---
+import DefaultLayout from "../../layouts/DefaultLayout.astro";
+import Quote from "../../components/Quote.astro";
+
+---
+
+<DefaultLayout>
+    <Quote author="Me" source="I made it up">I'm a quote from a page</Quote>
+    <Quote author="Me" source="I made it up"></Quote>
+    <Quote author="Me">I'm a quote from a page</Quote>
+    <Quote>I'm a quote from a page</Quote>
+    <Quote source="I made it up">I'm a quote from a page</Quote>
+    <Quote 
+        author="Chloe Gong" 
+        authorLink="https://www.thechloegong.com/"
+        source="Our Violent Ends"
+        sourceLink="https://thechloegong.com/ove/"
+    >
+        In <span class="underline decoration-wavy">this life</span> and <span class="underline decoration-wavy">the next</span>, for however long our souls remain, mine will always find yours
+    </Quote>
+</DefaultLayout>
+
+<style lang="scss">
+</style>
