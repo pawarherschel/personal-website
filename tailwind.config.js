@@ -22,8 +22,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'low-poly-grid': "url('./haikei/low-poly-grid-haikei.svg')",
-        'stacked-peaks': "url('./haikei/stacked-peaks-haikei.svg')",
+        'low-poly-grid': "url('/assets/haikei/low-poly-grid-haikei.svg')",
+        'stacked-peaks': "url('/assets/haikei/stacked-peaks-haikei.svg')",
       },
       fontFamily: {
         nekonium: ["Nekonium", "sans-serif"],
