@@ -1,0 +1,24 @@
+---
+import Divider from "./Divider.astro";
+import Quote from "./Quote.astro";
+
+---
+<div class="flex flex-col w-full lg:flex-row justify-evenly">
+  <Quote
+    author="Chloe Gong"
+    authorLink="https://www.thechloegong.com/"
+    source="Our Violent Ends"
+    sourceLink="https://thechloegong.com/ove/"
+  >
+    In this life and the next, for however long our souls remain, mine will always find yours
+  </Quote>
+  <div class="divider lg:divider-horizontal" />
+  <div class="flex flex-grow justify-center max-w-max min-h-full items-left flex-col glass px-8 rounded-box shadow">
+    <h1 class=" text-primary-focus">
+      Hello There,<br /> I'm Herschel Pravin Pawar
+    </h1>
+    <p class=" text-secondary-focus">
+      I am an aspiring game developer and Linux enthusiast with a passion for creating immersive experiences
+    </p>
+  </div>
+</div>

@@ -13,3 +13,9 @@ Font Link: [JANDA ELEGANT HANDWRITING](https://www.kimberlygeswein.com/downloads
 Instagram (Personal): [@kimberlygeswein](https://www.instagram.com/kimberlygeswein/)
 Instagram (Fonts): [@kimberlygesweinfonts](https://www.instagram.com/kimberlygesweinfonts/)
 Twitter: [@kimberlygeswein](https://twitter.com/kimberlygeswein)
+
+[Background Abstract Art](https://app.haikei.app/)
+Website: [https://haikei.app/](https://haikei.app/)
+
+[Color Palette](https://mycolor.space/?hex=%23FBCFE8&sub=1)
+Website: [https://mycolor.space/](https://mycolor.space/)

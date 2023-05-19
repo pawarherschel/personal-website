@@ -1,0 +1,25 @@
+---
+import DefaultLayout from "../../layouts/DefaultLayout.astro";
+import Divider from "../../components/Divider.astro";
+
+---
+
+<DefaultLayout>
+  <Divider dividerText="OR">
+    <h1 slot="right">
+      Right
+    </h1>
+    <h1 slot="left">
+      Left
+    </h1>
+  </Divider>
+
+  <Divider dividerText="OR" customLeftTag={true}>
+    <h1 slot="right">
+      Right
+    </h1>
+    <h1 slot="left">
+      Left
+    </h1>
+  </Divider>
+</DefaultLayout>

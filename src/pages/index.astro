@@ -1,13 +1,53 @@
 ---
+import Hero from '../components/Hero.astro';
 import Quote from '../components/Quote.astro';
 import DefaultLayout from '../layouts/DefaultLayout.astro';
 ---
 
 <DefaultLayout title="Home">
-  <div class="flex justify-center items-center h-full">
-    <button class="btn loading glass"><span>
-      Hello, I'm Herschel Pravin Pawar. This is my personal website which is under construction! Please come back later!
-    </span></button>
-    <Quote />
+  <div class="flex items-center justify-center">
+    <button class="loading glass btn"><span>under construction! Please come back later!</span></button>
   </div>
+  <div class="divider py-16">PREVIEW</div>
+
+  <section class="relative overflow-hidden m-4 rounded-box">
+    <div class="absolute inset-0 bg-low-poly-grid bg-cover bg-center bg-no-repeat blur-md"></div>
+    <div class="px-4 py-16">
+      <Hero id="hero" />
+    </div>
+  </section>
+  <div class="section-divider divider m-0 w-full bg-stacked-peaks bg-cover bg-center bg-no-repeat py-28">ABOUT ME</div>
+  <section class="chat-bg" id="about-me">
+    <div class="mockup-window border m-0 mx-32 px-4 py-4">
+    <div class="chat chat-end px-4 py-16 glass">
+      <div class="chat-bubble max-w-xl text-justified my-0.5">Hello again!</div>
+      <div class="chat-bubble max-w-xl text-justified my-0.5">My name is Herschel Pravin Pawar, nice to meet you</div>
+      <div class="chat-bubble max-w-xl text-justified my-0.5">I'm an aspiring game developer with a passion for creating immersive experiences</div>
+      <div class="chat-bubble max-w-xl text-justified my-0.5">
+        I'm currently focused on mastering the Godot game engine and exploring the world of Linux as an enthusiast
+      </div>
+      <div class="chat-bubble max-w-xl text-justified my-0.5">
+        With experience in Rust and Python, along with proficiency in Photoshop and Microsoft Power Automate, I'm
+        constantly expanding my skill set
+      </div>
+      <div class="chat-bubble max-w-xl text-justified my-0.5">
+        I'm actively pursuing RHCE (Red Hat Certified Engineer) and RHCSA (Red Hat Certified System Administrator)
+        certifications to strengthen my expertise in Linux system administration
+      </div>
+      <div class="chat-bubble max-w-xl text-justified my-0.5">
+        With a diverse skill set and unwavering dedication to technology, I'm eager to continue pushing boundaries in
+        the field of game development
+      </div>
+    </div></div>
+  </section>
 </DefaultLayout>
+
+<style lang="scss">
+  .section-divider {
+    aspect-ratio: 900/150;
+  }
+
+  .chat-bg {
+    background: #c297ff;
+  }
+</style>

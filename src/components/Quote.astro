@@ -1,60 +1,75 @@
 ---
-const { author, authorLink, source, sourceLink } = Astro.props as IQuote;
+interface Props {
+  author?: string;
+  authorLink?: string;
+  source?: string;
+  sourceLink?: string;
+}
+
+const { author, authorLink, source, sourceLink} = Astro.props;
 
 const quote = 'Default Quote - Please update me!';
 ---
 
-<div class="card min-h-fit w-2/5 justify-center bg-neutral text-neutral-content">
-    <div class="card-body items-center text-center">
-        <blockquote class="quote text-justify font-jandaElegant text-3xl text-secondary flex-none hyphens-auto">
-            <p><slot>{quote}</slot></p>
-        </blockquote>
-        <figcaption class="flex w-full items-center justify-center">
-            <div class="card-title w-full text-4xl">
-                {
-                    author && (
-                        <a class="author items- font-nekonium !text-primary" href={authorLink} target="_blank" rel="noopener noreferrer">
-                            {author}
-                        </a>
-                    )
-                }
-                {
-                    author && source && (
-                        <a class="source items-end font-nekonium !text-primary-content" href={sourceLink} target="_blank" rel="noopener noreferrer">
-                            {source}
-                        </a>
-                    )
-                }
-            </div>
-        </figcaption>
-    </div>
+<div class="min-h-fit w-2/5 justify-center bg-neutral text-neutral-content rounded-box flex flex-col relative">
+  <div class="card-body items-center text-center">
+    <blockquote class="quote flex-none text-justify font-jandaElegant text-3xl text-secondary">
+      <p><slot>{quote}</slot></p>
+    </blockquote>
+    <figcaption class="flex w-full items-center justify-center">
+      <div class="card-title w-full text-4xl">
+        {
+          author && (
+            <a
+              class="author items-start font-nekonium link !link-hover !text-primary"
+              href={authorLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {author}
+            </a>
+          )
+        }
+        {
+          author && source && (
+            <a
+              class="source items-end font-nekonium link !link-hover !text-primary-content"
+              href={sourceLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {source}
+            </a>
+          )
+        }
+      </div>
+    </figcaption>
+  </div>
 </div>
 
 <style lang="scss">
-    .author {
-        min-width: 50%;
-        text-align: start;
-        text-decoration: none !important;
-    }
-    .source {
-        min-width: 50%;
-        text-align: end;
-        text-decoration: none !important;
-    }
-    :global(.quote) {
-        quotes: '«' '»';
-        display: flex;
-    }
-    .quote::before {
-        content: open-quote;
-        font-size: 4rem;
-        align-self: flex-start;
-        @apply text-secondary-content;
-    }
-    .quote::after {
-        content: close-quote;
-        font-size: 4rem;
-        align-self: flex-end;
-        @apply text-secondary-content;
-    }
+  .author {
+    min-width: 50%;
+    text-align: start;
+  }
+  .source {
+    min-width: 50%;
+    text-align: end;
+  }
+  :global(.quote) {
+    quotes: '«' '»';
+    display: flex;
+  }
+  .quote::before {
+    content: open-quote;
+    font-size: 4rem;
+    align-self: flex-start;
+    @apply text-secondary-content;
+  }
+  .quote::after {
+    content: close-quote;
+    font-size: 4rem;
+    align-self: flex-end;
+    @apply text-secondary-content;
+  }
 </style>

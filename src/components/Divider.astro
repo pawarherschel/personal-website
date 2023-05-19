@@ -1,0 +1,35 @@
+---
+interface Props {
+  dividerText?: string;
+  customLeftTag?: boolean;
+  customRightTag?:boolean;
+}
+
+const { dividerText, customLeftTag = false, customRightTag = false} = Astro.props;
+---
+
+<div class="flex flex-col w-full lg:flex-row justify-evenly">
+  { customLeftTag ?
+    <slot name="left">
+      content
+    </slot>
+    :
+    <div class="flex-grow min-h-32 bg-base-300">
+      <slot name="left">
+        content
+      </slot>
+    </div>
+  }
+  <div class="divider lg:divider-horizontal">{dividerText}</div>
+  { customRightTag ?
+    <slot name="right">
+      content
+    </slot>
+    :
+    <div class="flex-grow min-h-32 bg-base-300">
+      <slot name="right">
+        content
+      </slot>
+    </div>
+  }
+</div>
