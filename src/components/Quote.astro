@@ -6,12 +6,12 @@ interface Props {
   sourceLink?: string;
 }
 
-const { author, authorLink, source, sourceLink} = Astro.props;
+const { author, authorLink, source, sourceLink } = Astro.props;
 
 const quote = 'Default Quote - Please update me!';
 ---
 
-<div class="min-h-fit w-2/5 justify-center bg-neutral text-neutral-content rounded-box flex flex-col relative">
+<div class="rounded-box relative flex min-h-fit w-2/5 flex-col justify-center bg-neutral text-neutral-content">
   <div class="card-body items-center text-center">
     <blockquote class="quote flex-none text-justify font-jandaElegant text-3xl text-secondary">
       <p><slot>{quote}</slot></p>
@@ -21,7 +21,7 @@ const quote = 'Default Quote - Please update me!';
         {
           author && (
             <a
-              class="author items-start font-nekonium link !link-hover !text-primary"
+              class="author !link-hover link items-start font-nekonium !text-primary"
               href={authorLink}
               target="_blank"
               rel="noopener noreferrer"
@@ -33,7 +33,7 @@ const quote = 'Default Quote - Please update me!';
         {
           author && source && (
             <a
-              class="source items-end font-nekonium link !link-hover !text-primary-content"
+              class="source !link-hover link items-end font-nekonium !text-primary-content"
               href={sourceLink}
               target="_blank"
               rel="noopener noreferrer"
