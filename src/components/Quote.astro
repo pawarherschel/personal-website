@@ -11,7 +11,7 @@ const { author, authorLink, source, sourceLink } = Astro.props;
 const quote = 'Default Quote - Please update me!';
 ---
 
-<div class="rounded-box relative flex min-h-fit w-2/5 flex-col justify-center bg-neutral text-neutral-content">
+<div class="rounded-box relative flex min-h-fit lg:w-2/5 flex-col justify-center bg-neutral text-neutral-content">
   <div class="card-body items-center text-center">
     <blockquote class="quote flex-none text-justify font-jandaElegant text-3xl text-secondary">
       <p><slot>{quote}</slot></p>
