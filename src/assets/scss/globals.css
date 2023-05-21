@@ -141,6 +141,18 @@ noscript {
 }
 
 @font-face {
+  font-family: "Nekonium";
+  src: url("/fonts/Nekonium.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "JandaElegantHandwriting";
+  src: url("/fonts/JandaElegantHandwriting.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: "Open Sans";
   src: local("Open Sans ExtraBold"), local("OpenSans-ExtraBold"), url("/fonts/OpenSans-ExtraBold.woff2") format("woff2"), url("/fonts/OpenSans-ExtraBold.woff") format("woff");
   font-weight: bold;
